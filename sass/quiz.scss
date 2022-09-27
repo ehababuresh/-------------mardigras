@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Palette+Mosaic&display=swap');
+$black:#0d0d0d;
+$white:#f2f2f2;
+$yellow:#f2cc0f;
+$green:#8cbf3f;
+$purple:#9453a6;
+$blue: #1d2cb9;
+$orange:#232526;
+$orangeyellow:#747220 ;
+
+body {
+  background: #232526;
+  
+  
+  background:rgb(211, 211, 182);
+  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Pattaya', 'Henny Penny';
+  color: #5b7a9e;
+}
+
+footer p {
+  color: white;
+}
+
+p {
+  font-family: 'Roboto';
+}
+
+body {
+  
+  color: #222;
+  -webkit-animation: transitionIn 2s;
+          animation: transitionIn 2s;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  padding: .8rem;
+  font-family: 'Henny Penny';
+  
+  background: black;
+ 
+  background: linear-gradient(to right, #141618, #090e13);
+  
+  background:rgb(37, 37, 16);
+  
+}
+
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+  color: white !important;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+.nav-link:hover {
+  color:  $orangeyellow !important;
+  
+  transition: 2s;
+  transform: scale(1.5, 0.2);
+}
+.navbar-brand {
+  
+  background:blue;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+.navbar-brand:hover {
+  -webkit-animation: shake 0.5s ease-in;
+          animation: shake 0.5s ease-in;
+          transform: scale(1.5);
+          transition: transform 1.6s;
+}
+
+
+
+
+
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: #9fb5e2;
+}
+
+.fa-twitter {
+  color: #269cb9;
+}
+
+.fa-tripadvisor {
+  color: rgb(23, 65, 23);
+}
+
+.fa-instagram {
+  color: #a0aa17;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-tripadvisor:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+  color: white;
+}s
+
+footer {
+  background-color: #3f3f3f;
+  color: white;
+  padding-top: 2rem;
+}
+
+hr.light {
+  border-top: 1px solid white;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: rgb(37, 37, 16);
+}
+
+footer a {
+  color: white;
+}
+
+#logo {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+hr.light-100 {
+  border-top: 1px solid white;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+body{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #333;
+  
+  
+}
+.question{
+  font-weight: 700;
+  text-align:center;
+ 
+ 
+  
+}
+.answers {
+    margin-bottom: 30px;
+    text-align: center;
+   margin-top: 15px;
+   margin: 10px;
+    
+}
+#submit{
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  border: 0px;
+  border-radius: 3px;
+  padding: 30px;
+  cursor: pointer;
+  margin-left: 300px;
+ 
+}
+#submit:hover{
+  background-color: #3a8;
+  
+}
+

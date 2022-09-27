@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Palette+Mosaic&display=swap');
+
+body {
+  -webkit-animation: transitionIn 2s;
+          animation: transitionIn 2s;
+  
+  color: #f2f2f2;
+  overflow-x: hidden;
+  background: #dfeaf0;
+  
+ 
+  background:rgb(211, 211, 182);
+
+}
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Pattaya', 'Henny Penny';
+  color: #5b7a9e;
+}
+
+footer p {
+  color: #f2f2f2;
+}
+
+p {
+  font-family: 'Roboto';
+}
+
+.navbar {
+  padding: .8rem;
+  font-family: 'Henny Penny';
+  
+  background: #232526;
+  
+
+  background:rgb(37, 37, 16);
+  
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+  color: #f2f2f2 !important;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
+.nav-link:hover {
+  color:  #747220 !important;
+  
+  transition: 2s;
+  transform: scale(1.5, 0.2);
+}
+
+.navbar-brand {
+  background:#1d2cb9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: ease 0.2s;
+  transition: ease 2s;
+}
+
+.navbar-brand:hover {
+  -webkit-animation: shake 1s ease-in;
+          animation: shake 1s ease-in;
+          transform: scale(1.5);
+          transition: transform 1.6s;
+}
+
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #0d0d0d;
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #0d0d0d;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #8e929b;
+  border: 1px solid #0d0d0d;
+}
+
+.btn-primary:hover {
+  background-color: #58a9b8;
+  border: 1px solid #328199;
+}
+
+.btn-outline-secondary {
+  color: #f2f2f2;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #2d4e79;
+}
+
+.display-2 {
+  color: #f2f2f2;
+}
+
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+
+.ad {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.cone {
+  color: #f2f2f2;
+  background: #dee0e7;
+  
+  
+  background: #034357;
+}
+
+.cone h4 {
+  color: #f2f2f2;
+}
+
+.ctwo {
+  color: #f2f2f2;
+  background:#034357;;
+}
+
+.ctwo h4 {
+  color: #f2f2f2;
+}
+
+.cthree {
+  color: #f2f2f2;
+  background: #41295a;
+  
+  
+  background: #034357;
+  
+}
+
+.cthree h4 {
+  color: #f2f2f2;
+}
+
+.welcome hr {
+  border-top: 2px solid #863d3d;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+/*footer*/
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-tripadvisor {
+  color: green;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-tripadvisor:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: rgb(37, 37, 16);
+}
+p {
+  color: #f2f2f2;
+}
+
+#logo {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+.colorp {
+  background-color: #0d0d0d !important;
+  color: white;
+}
+
+.cc {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cc h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #0d0d0d;
+}
+
+.cc h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #0d0d0d;
+  padding-bottom: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px 14px;
+  }
+  .display-4 {
+    font-size:200%;
+  }
+}

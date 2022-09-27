@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Mardigras New Orleans</title>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js">
+    </script>
+   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />-->
+    <link rel="stylesheet" href="css/quiz.css">
+    
+    
+   
+   
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Nunito:wght@300&family=Palette+Mosaic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation  -->
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="/images/image99.jpg" alt="image99" style="width: 150px; height: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto mx-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about2.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="media.html">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Quiz?</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+   <section>
+   <p> <div  id="quiz"></div>
+<button id="submit" >Get Results</button>
+<div id="results"></div> 
+</p>
+   
+<script>
+  
+    var myQuestions = [
+    {
+      question: " 1: in whitch city the mardi gras event take aplace ?",
+      answers: {
+       a: 'texas', 
+       
+       b: 'new orleans',
+       c: 'florida',
+      },
+      correctAnswer: 'b'
+    },
+    {
+      question: "2: What the colors that symolpiz mardi gras?",
+      answers: {
+        a: 'orange, red, yellow',
+        b: 'black,blue,red',
+        c: 'purple,green,yellow'
+      },
+      correctAnswer: 'c'
+    },
+    {
+      question: "3: what does mardi gras mean?",
+      answers: {
+        a: 'fat tuesday',
+        b: 'aparady party',
+        c: 'costuome party'
+      },
+      correctAnswer: 'a'
+    },
+    {
+      question: "4: how many time ayear do mardi gras celebrate?",
+      answers: {
+        a: 'once ayear',
+        b: 'five time ayear ',
+        c: 'thre time ayear',
+      },
+      correctAnswer: 'a'
+    },
+    {
+      question: "5: how did the spaniards add their touch to french mardi gras ?",
+      answers: {
+        a: 'by changing the name to marti grodo',
+        b: 'by marching on differnte day',
+        c: 'by holding lighted torch paradas  '
+      },
+      correctAnswer: 'c'
+    },
+    {
+      question: "6: which of the following was new orleans first mystic society ?",
+      answers: {
+        a: 'crewe of comos',
+        b: 'order of inca',
+        c: 'comic cowboys'
+      },
+      correctAnswer: 'a'
+    },
+    {
+      question: "7: which of the following was mobile first women socity?",
+      answers: {
+        a: 'order of athna',
+        b: 'le krewe bienville ',
+        c: 'polka dots'
+      },
+      correctAnswer: 'b'
+    },
+    {
+      question: "8: king cakes apopular mardi gras traditin ?",
+      answers: {
+        a: 'tresurment map ',
+        b: 'sillver dollar ',
+        c: 'pastic baby'
+      },
+      correctAnswer: 'c'
+    },
+    {
+      question: "9: mardi gars events are orgnaized by prive clubs known as?",
+      answers: {
+        a: 'brother hoods',
+        b: 'krewes',
+        c: 'fratimatis'
+      },
+      correctAnswer: 'c'
+    },
+    {
+      question: "10: mardi gars celebrate are centered around whitch famous neighbrhood ?",
+      answers: {
+        a: 'french quartar',
+        b: 'sin city',
+        c: 'latin quariar'
+      },
+      correctAnswer: 'a'
+    },
+    
+  
+    
+  ];
+  
+  var quizContainer = document.getElementById('quiz');
+  
+  var resultsContainer = document.getElementById('results');
+  var submitButton = document.getElementById('submit');
+  
+  generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+  
+  function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+  
+    function showQuestions(questions, quizContainer){
+      // we'll need a place to store the output and the answer choices
+      var output = [];
+      var answers;
+  
+      // for each question...
+      for(var i=0; i<questions.length; i++){
+        
+        // first reset the list of answers
+        answers = [];
+  
+        // for each available answer...
+        for(letter in questions[i].answers){
+  
+          // ...add an html radio button
+          answers.push(
+            '<label>'
+              + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+              + letter + ': '
+              + questions[i].answers[letter]
+            + '</label>'
+          );
+        }
+  
+        // add this question and its answers to the output
+        output.push(
+          '<div class="question">' + questions[i].question + '</div>'
+          + '<div class="answers">' + answers.join('') + '</div>'
+        );
+      }
+  
+      // finally combine our output list into one string of html and put it on the page
+      quizContainer.innerHTML = output.join('');
+    }
+  
+  
+    function showResults(questions, quizContainer, resultsContainer){
+      
+      // gather answer containers from our quiz
+      var answerContainers = quizContainer.querySelectorAll('.answers');
+      
+      // keep track of user's answers
+      var userAnswer = '';
+      var numCorrect = 0;
+      
+      // for each question...
+      for(var i=0; i<questions.length; i++){
+  
+        // find selected answer
+        userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+        
+        // if answer is correct
+        if(userAnswer===questions[i].correctAnswer){
+          // add to the number of correct answers
+          numCorrect++;
+          
+          // color the answers green
+          answerContainers[i].style.color = 'lightgreen';
+        }
+        // if answer is wrong or blank
+        else{
+          // color the answers red
+          answerContainers[i].style.color = 'red';
+        }
+      }
+  
+      // show number of correct answers out of total
+      resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    }
+  
+    // show questions right away
+    showQuestions(questions, quizContainer);
+    
+    // on submit, show results
+    submitButton.onclick = function(){
+      showResults(questions, quizContainer, resultsContainer);
+    }
+  
+  }
+</script>
+
+
+
+</div>
+
+
+
+
+    <!-- Footer -->
+    <footer id="foot">
+    <div class="container-fluid padding" data-aos="fade-up">
+        <div class="row text-center padding">
+            <div class="col-12">
+                
+            </div>
+            <div class="col-12 social padding">
+                <a href="https://www.facebook.com/MardiGrasNewOrleans" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/MardiGrasNOLA" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.tripadvisor.com/Profile/MardiGrasNOLA" target="_blank"><i
+                        class="fab fa-tripadvisor"></i></a>
+                <a href="https://www.instagram.com/mardigrasneworleans/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCOrq1qF6dVDn9Do-wvbKh0Q" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-12 col-l-12 col-lg-12">
+                    
+                    <h5>Copyright&copy; 2022 MardiGras</h5>
+                </div>
+            </div>
+            <p style="text-align: right;"><a href='#top'><img src="/images/image85.jpg" style="width: 50px;" alt="logo"></a>
+            </p>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>

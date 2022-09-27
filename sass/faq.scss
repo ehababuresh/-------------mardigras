@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Palette+Mosaic&display=swap');
+$black:#0d0d0d;
+$white:#f2f2f2;
+$yellow:#f2cc0f;
+$green:#8cbf3f;
+$purple:#9453a6;
+$blue: #1d2cb9;
+$orange:#232526;
+$orangeyellow:#747220 ; 
+
+* {
+    margin: 0;
+    padding: 0; 
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Pattaya', 'Henny Penny';
+    color: #5b7a9e ;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Roboto';
+  }
+  
+  body {
+   
+    color: white;
+    -webkit-animation: transitionIn 2s;
+            animation: transitionIn 2s;
+    background: white;
+    
+    background:rgb(211, 211, 182);
+  }
+  
+  @-webkit-keyframes transitionIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes transitionIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .navbar {
+    padding: .8rem;
+    font-family: 'Henny Penny';
+    background: black;
+    
+    background:rgb(37, 37, 16);
+  }
+  
+  .navbar-nav li {
+    padding-right: 20px;
+  }
+  
+  .nav-link {
+    font-size: 1.1em !important;
+    color: white !important;
+    -webkit-transition: ease-out 0.2s;
+    transition: ease-out 0.2s;
+  }
+  
+  .nav-link:hover {
+    color:  $orangeyellow!important;
+    
+    transition: 2s;
+    transform: scale(1.5, 0.2);
+  }
+  
+  .navbar-brand {
+    background:blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: ease 0.2s;
+    transition: ease 0.2s;
+  }
+  
+  .navbar-brand:hover {
+    -webkit-animation: shake 0.5s ease-in;
+            animation: shake 0.5s ease-in;
+            transform: scale(1.5);
+            transition: transform 1.6s;
+  }
+  
+  
+  
+  .card,
+  .card-header {
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    background: #d9a7c7;
+    
+    
+    background: rgb(140, 140, 158);
+    
+  }
+  
+  .card-body {
+    color: black;
+  }
+  
+  .btn-link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .btn-link:hover {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .help {
+    font-size: 1.2em;
+  }
+  
+  .help a {
+    color: #3f5c91;
+  }
+  
+  .help a:hover {
+    color: #f2cc0f;
+  }
+  
+  #headingOne,
+  #headingThree,
+  #headingFive,
+  #headingSeven,
+  #headingNine,
+  #headingEleven,
+  #headingThirdteen,
+  #headingFifteen,
+  #headingSeventeen,
+  #headingNineteen,
+  #headingTwentyone,
+  #headingTwentythree {
+    background: #3a151d;
+    
+   
+    background: rgb(140, 140, 158);
+    
+  }
+  
+  .social a {
+    font-size: 4.5em;
+    padding: 3rem;
+  }
+  
+  .fa-facebook {
+    color: #3b5998;
+  }
+  
+  .fa-twitter {
+    color: #00aced;
+  }
+  
+  .fa-tripadvisor {
+    color: green;
+  }
+  
+  .fa-instagram {
+    color: #517fa4;
+  }
+  
+  .fa-youtube {
+    color: #bb0000;
+  }
+  
+  .fa-facebook:hover,
+  .fa-twitter:hover,
+  .fa-tripadvisor:hover,
+  .fa-instagram:hover,
+  .fa-youtube:hover {
+    color: white;
+  }
+  
+  footer {
+    background-color: #3f3f3f;
+    color: white;
+    padding-top: 2rsem;
+  }
+  
+  footer {
+    background-color: rgb(37, 37, 16);
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  #logo {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 425px) and (max-width: 1025px) {
+    .image1,
+    .image2 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image1,
+    .image2 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    p {
+      font-size: 0.7em;
+    }
+    h1 {
+      font-size: 2.2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    .container {
+      padding-right: 8%;
+    }
+    .image1,
+    .image2 {
+      width: 100%;
+      padding-bottom: 2%;
+    }
+  }
+  
